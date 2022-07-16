@@ -16,24 +16,38 @@
 
 //  fizzBuzz(100)
 
-let fizzBuzz = (num) => {
-  let result = []
-  for (let i = 1; i <= num; i++) {
-    if (i % 15 == 0) {
-      result.push("FizzBuzz")
-    } else if (i % 3 == 0) {
-      result.push("Fizz")
-    } else if (i % 5 == 0) {
-      result.push("Buzz")
-    } else result.push(i)
-  }
-  return result
-}
+// let fizzBuzz = (num) => {
+//   let result = []
+//   for (let i = 1; i <= num; i++) {
+//     if (i % 15 == 0) {
+//       result.push("FizzBuzz")
+//     } else if (i % 3 == 0) {
+//       result.push("Fizz")
+//     } else if (i % 5 == 0) {
+//       result.push("Buzz")
+//     } else result.push(i)
+//   }
+//   return result
+// }
 
-let fizzBuzzResults = fizzBuzz(15)
-for (let i = 0; i < fizzBuzzResults.length; i++) {
-    console.log(fizzBuzzResults[i])
-}
+// let fizzBuzzResults = fizzBuzz(15)
+// for (let i = 0; i < fizzBuzzResults.length; i++) {
+//     console.log(fizzBuzzResults[i])
+// }
 
 // let list = fizzBuzzResults.join('\n')
 // console.log(fizzBuzzResults)
+
+
+function reverseStr(str) {
+    let originalArray= str.split("")
+    let jointStr = ''
+    for (let i = originalArray.length - 1; (i >= 0); i--) {
+        jointStr += originalArray[i]
+    }
+    return jointStr
+  }
+
+reverseStr('The sky is blue')
+
+console.log(reverseStr('The sky is blue'))
