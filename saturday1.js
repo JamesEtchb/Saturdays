@@ -39,15 +39,50 @@
 // console.log(fizzBuzzResults)
 
 
-function reverseStr(str) {
-    let originalArray= str.split("")
-    let jointStr = ''
-    for (let i = originalArray.length - 1; (i >= 0); i--) {
-        jointStr += originalArray[i]
+// function reverseStr(str) {
+//     let originalArray= str.split("")
+//     let jointStr = ''
+//     for (let i = originalArray.length - 1; (i >= 0); i--) {
+//         jointStr += originalArray[i]
+//     }
+//     return jointStr
+//   }
+
+// reverseStr('The sky is blue')
+
+// console.log(reverseStr('The sky is blue'))
+// console.log(reverseStr('This is just a test'))
+// console.log(reverseStr('This may also be a string backwards'))
+// console.log(reverseStr('hello world'))
+
+
+const shoppingList = [1,2,3,4,5]
+const cart = [2,4]
+
+//loop first array
+for (let i = 0; i < shoppingList.length; i++) {
+    //grab each element on shoppingList
+    let shoppingListItem = shoppingList[i]
+    //create a variable that keeps track if we found it in the cart
+    let foundInCart = false
+    //loop through second array
+    for (let j = 0; j < cart.length; j++){
+      let cartItem = cart[j]
+      //check whether the element on the shoppingList exits in the index of the cart
+      if (shoppingListItem === cartItem){
+        //if it exists then set the variable foundInCart to true    
+        foundInCart = true
+      }
     }
-    return jointStr
+    //if it does not exist in any element of the second array then
+    //if (foundInCart === false){
+    //if (foundInCart != true){
+      if (!foundInCart){
+      //push it to the final list
+      finalList.push(shoppingListItem)
+    }
   }
-
-reverseStr('The sky is blue')
-
-console.log(reverseStr('The sky is blue'))
+  
+  
+  console.log(finalList)
+  
